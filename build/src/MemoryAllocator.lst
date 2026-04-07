@@ -1,0 +1,1094 @@
+GAS LISTING /tmp/ccULmWmu.s 			page 1
+
+
+   1              		.file	"MemoryAllocator.cpp"
+   2              		.option pic
+   3              		.option norelax
+   4              		.text
+   5              	.Ltext0:
+   6              		.align	2
+   7              		.globl	_ZN15MemoryAllocatorC2Ev
+   9              	_ZN15MemoryAllocatorC2Ev:
+  10              	.LFB2:
+  11              		.file 1 "src/MemoryAllocator.cpp"
+   1:src/MemoryAllocator.cpp **** #include "../h/MemoryAllocator.hpp"
+   2:src/MemoryAllocator.cpp **** MemoryAllocator &MemoryAllocator::getAllocatorInstance() {
+   3:src/MemoryAllocator.cpp ****     static MemoryAllocator instance;
+   4:src/MemoryAllocator.cpp ****     return instance;
+   5:src/MemoryAllocator.cpp **** }
+   6:src/MemoryAllocator.cpp **** MemoryAllocator::MemoryAllocator() {
+  12              		.loc 1 6 1
+  13              		.cfi_startproc
+  14              	.LVL0:
+  15 0000 130101FF 		addi	sp,sp,-16
+  16              		.cfi_def_cfa_offset 16
+  17 0004 23348100 		sd	s0,8(sp)
+  18              		.cfi_offset 8, -8
+  19 0008 13040101 		addi	s0,sp,16
+  20              		.cfi_def_cfa 8, 0
+  21              	.LBB2:
+  22              		.loc 1 6 34 is_stmt 0
+  23 000c 97070000 		la	a5,HEAP_START_ADDR
+  23      83B70700 
+  24 0014 83B70700 		ld	a5,0(a5)
+  25 0018 2330F500 		sd	a5,0(a0)
+   7:src/MemoryAllocator.cpp ****     head->blocksTaken=1;
+  26              		.loc 1 7 5 is_stmt 1
+  27              		.loc 1 7 22 is_stmt 0
+  28 001c 13071000 		li	a4,1
+  29 0020 23B0E700 		sd	a4,0(a5)
+   8:src/MemoryAllocator.cpp ****     head->nextBlock= 0;
+  30              		.loc 1 8 5 is_stmt 1
+  31 0024 83370500 		ld	a5,0(a0)
+  32              		.loc 1 8 20 is_stmt 0
+  33 0028 23B40700 		sd	zero,8(a5)
+  34              	.LBE2:
+   9:src/MemoryAllocator.cpp **** }
+  35              		.loc 1 9 1
+  36 002c 03348100 		ld	s0,8(sp)
+  37              		.cfi_restore 8
+  38              		.cfi_def_cfa 2, 16
+  39 0030 13010101 		addi	sp,sp,16
+  40              		.cfi_def_cfa_offset 0
+  41 0034 67800000 		jr	ra
+  42              		.cfi_endproc
+  43              	.LFE2:
+  45              		.globl	_ZN15MemoryAllocatorC1Ev
+  46              		.set	_ZN15MemoryAllocatorC1Ev,_ZN15MemoryAllocatorC2Ev
+  47              		.align	2
+  48              		.globl	_ZN15MemoryAllocator20getAllocatorInstanceEv
+  50              	_ZN15MemoryAllocator20getAllocatorInstanceEv:
+GAS LISTING /tmp/ccULmWmu.s 			page 2
+
+
+  51              	.LFB0:
+   2:src/MemoryAllocator.cpp ****     static MemoryAllocator instance;
+  52              		.loc 1 2 58 is_stmt 1
+  53              		.cfi_startproc
+   3:src/MemoryAllocator.cpp ****     return instance;
+  54              		.loc 1 3 5
+   3:src/MemoryAllocator.cpp ****     return instance;
+  55              		.loc 1 3 28 is_stmt 0
+  56 0038 97070000 		lbu	a5,.LANCHOR0
+  56      83C70700 
+  57 0040 63880700 		beqz	a5,.L9
+   4:src/MemoryAllocator.cpp **** }
+  58              		.loc 1 4 5 is_stmt 1
+   5:src/MemoryAllocator.cpp **** MemoryAllocator::MemoryAllocator() {
+  59              		.loc 1 5 1 is_stmt 0
+  60 0044 17050000 		lla	a0,.LANCHOR0+8
+  60      13050500 
+  61 004c 67800000 		ret
+  62              	.L9:
+   2:src/MemoryAllocator.cpp ****     static MemoryAllocator instance;
+  63              		.loc 1 2 58 discriminator 1
+  64 0050 130101FF 		addi	sp,sp,-16
+  65              		.cfi_def_cfa_offset 16
+  66 0054 23341100 		sd	ra,8(sp)
+  67 0058 23308100 		sd	s0,0(sp)
+  68              		.cfi_offset 1, -8
+  69              		.cfi_offset 8, -16
+  70 005c 13040101 		addi	s0,sp,16
+  71              		.cfi_def_cfa 8, 0
+   3:src/MemoryAllocator.cpp ****     return instance;
+  72              		.loc 1 3 28 discriminator 1
+  73 0060 17050000 		lla	a0,.LANCHOR0+8
+  73      13050500 
+  74 0068 97000000 		call	_ZN15MemoryAllocatorC1Ev
+  74      E7800000 
+  75              	.LVL1:
+  76 0070 93071000 		li	a5,1
+  77 0074 17070000 		sb	a5,.LANCHOR0,a4
+  77      2300F700 
+   4:src/MemoryAllocator.cpp **** }
+  78              		.loc 1 4 5 is_stmt 1 discriminator 1
+   5:src/MemoryAllocator.cpp **** MemoryAllocator::MemoryAllocator() {
+  79              		.loc 1 5 1 is_stmt 0 discriminator 1
+  80 007c 17050000 		lla	a0,.LANCHOR0+8
+  80      13050500 
+  81 0084 83308100 		ld	ra,8(sp)
+  82              		.cfi_restore 1
+  83 0088 03340100 		ld	s0,0(sp)
+  84              		.cfi_restore 8
+  85              		.cfi_def_cfa 2, 16
+  86 008c 13010101 		addi	sp,sp,16
+  87              		.cfi_def_cfa_offset 0
+  88 0090 67800000 		jr	ra
+  89              		.cfi_endproc
+  90              	.LFE0:
+  92              		.align	2
+  93              		.globl	_ZN15MemoryAllocator8allocateEi
+GAS LISTING /tmp/ccULmWmu.s 			page 3
+
+
+  95              	_ZN15MemoryAllocator8allocateEi:
+  96              	.LFB4:
+  10:src/MemoryAllocator.cpp **** 
+  11:src/MemoryAllocator.cpp **** void *MemoryAllocator::allocate(int blocks) {
+  97              		.loc 1 11 45 is_stmt 1
+  98              		.cfi_startproc
+  99              	.LVL2:
+ 100 0094 130101FF 		addi	sp,sp,-16
+ 101              		.cfi_def_cfa_offset 16
+ 102 0098 23348100 		sd	s0,8(sp)
+ 103              		.cfi_offset 8, -8
+ 104 009c 13040101 		addi	s0,sp,16
+ 105              		.cfi_def_cfa 8, 0
+  12:src/MemoryAllocator.cpp ****     BlockDescriptor *elem=head;
+ 106              		.loc 1 12 5
+ 107              		.loc 1 12 22 is_stmt 0
+ 108 00a0 03370500 		ld	a4,0(a0)
+ 109              	.LVL3:
+ 110              	.L14:
+  13:src/MemoryAllocator.cpp ****     while(elem->nextBlock){
+ 111              		.loc 1 13 5 is_stmt 1
+ 112              		.loc 1 13 17
+ 113 00a4 83368700 		ld	a3,8(a4)
+ 114 00a8 63820604 		beqz	a3,.L11
+ 115              	.LBB3:
+  14:src/MemoryAllocator.cpp ****         int freeblocks=(elem->nextBlock-((uint64)elem+elem->blocksTaken*MEM_BLOCK_SIZE))/MEM_BLOCK_
+ 116              		.loc 1 14 9
+ 117              		.loc 1 14 61 is_stmt 0
+ 118 00ac 03350700 		ld	a0,0(a4)
+ 119              		.loc 1 14 72
+ 120 00b0 13156500 		slli	a0,a0,6
+ 121              		.loc 1 14 54
+ 122 00b4 3305A700 		add	a0,a4,a0
+ 123              		.loc 1 14 40
+ 124 00b8 B387A640 		sub	a5,a3,a0
+ 125              		.loc 1 14 89
+ 126 00bc 93D76700 		srli	a5,a5,6
+ 127              		.loc 1 14 13
+ 128 00c0 9B870700 		sext.w	a5,a5
+ 129              	.LVL4:
+  15:src/MemoryAllocator.cpp ****         if(freeblocks>=blocks){
+ 130              		.loc 1 15 9 is_stmt 1
+ 131              	.LBB4:
+ 132 00c4 63D6B700 		bge	a5,a1,.L17
+ 133              	.LBE4:
+  16:src/MemoryAllocator.cpp ****             BlockDescriptor* nelem=(BlockDescriptor*)((uint64)elem+elem->blocksTaken*MEM_BLOCK_SIZE
+  17:src/MemoryAllocator.cpp ****             nelem->nextBlock=elem->nextBlock;
+  18:src/MemoryAllocator.cpp ****             nelem->blocksTaken=blocks;
+  19:src/MemoryAllocator.cpp ****             elem->nextBlock=(uint64)nelem;
+  20:src/MemoryAllocator.cpp ****             return nelem+1;
+  21:src/MemoryAllocator.cpp ****         }
+  22:src/MemoryAllocator.cpp ****         elem=(BlockDescriptor*)elem->nextBlock;
+ 134              		.loc 1 22 9
+ 135              		.loc 1 22 13 is_stmt 0
+ 136 00c8 13870600 		mv	a4,a3
+ 137              	.LVL5:
+ 138              	.LBE3:
+GAS LISTING /tmp/ccULmWmu.s 			page 4
+
+
+  13:src/MemoryAllocator.cpp ****         int freeblocks=(elem->nextBlock-((uint64)elem+elem->blocksTaken*MEM_BLOCK_SIZE))/MEM_BLOCK_
+ 139              		.loc 1 13 5
+ 140 00cc 6FF09FFD 		j	.L14
+ 141              	.LVL6:
+ 142              	.L17:
+ 143              	.LBB7:
+ 144              	.LBB6:
+ 145              	.LBB5:
+  16:src/MemoryAllocator.cpp ****             BlockDescriptor* nelem=(BlockDescriptor*)((uint64)elem+elem->blocksTaken*MEM_BLOCK_SIZE
+ 146              		.loc 1 16 13 is_stmt 1
+  17:src/MemoryAllocator.cpp ****             nelem->blocksTaken=blocks;
+ 147              		.loc 1 17 13
+  17:src/MemoryAllocator.cpp ****             nelem->blocksTaken=blocks;
+ 148              		.loc 1 17 29 is_stmt 0
+ 149 00d0 2334D500 		sd	a3,8(a0)
+  18:src/MemoryAllocator.cpp ****             elem->nextBlock=(uint64)nelem;
+ 150              		.loc 1 18 13 is_stmt 1
+  18:src/MemoryAllocator.cpp ****             elem->nextBlock=(uint64)nelem;
+ 151              		.loc 1 18 31 is_stmt 0
+ 152 00d4 2330B500 		sd	a1,0(a0)
+  19:src/MemoryAllocator.cpp ****             return nelem+1;
+ 153              		.loc 1 19 13 is_stmt 1
+  19:src/MemoryAllocator.cpp ****             return nelem+1;
+ 154              		.loc 1 19 28 is_stmt 0
+ 155 00d8 2334A700 		sd	a0,8(a4)
+  20:src/MemoryAllocator.cpp ****         }
+ 156              		.loc 1 20 13 is_stmt 1
+  20:src/MemoryAllocator.cpp ****         }
+ 157              		.loc 1 20 26 is_stmt 0
+ 158 00dc 13050501 		addi	a0,a0,16
+ 159              	.LVL7:
+ 160              	.L10:
+ 161              	.LBE5:
+ 162              	.LBE6:
+ 163              	.LBE7:
+  23:src/MemoryAllocator.cpp ****     }
+  24:src/MemoryAllocator.cpp ****     if(((uint64)HEAP_END_ADDR-((uint64)elem+elem->blocksTaken*MEM_BLOCK_SIZE))/MEM_BLOCK_SIZE>=(uin
+  25:src/MemoryAllocator.cpp ****         BlockDescriptor* nelem=(BlockDescriptor*)((uint64)elem+elem->blocksTaken*MEM_BLOCK_SIZE);
+  26:src/MemoryAllocator.cpp ****         nelem->nextBlock=0;
+  27:src/MemoryAllocator.cpp ****         nelem->blocksTaken=blocks;
+  28:src/MemoryAllocator.cpp ****         elem->nextBlock=(uint64)nelem;
+  29:src/MemoryAllocator.cpp ****         return nelem+1;
+  30:src/MemoryAllocator.cpp ****     }
+  31:src/MemoryAllocator.cpp ****     return nullptr;
+  32:src/MemoryAllocator.cpp **** }
+ 164              		.loc 1 32 1
+ 165 00e0 03348100 		ld	s0,8(sp)
+ 166              		.cfi_remember_state
+ 167              		.cfi_restore 8
+ 168              		.cfi_def_cfa 2, 16
+ 169 00e4 13010101 		addi	sp,sp,16
+ 170              		.cfi_def_cfa_offset 0
+ 171 00e8 67800000 		jr	ra
+ 172              	.L11:
+ 173              		.cfi_restore_state
+  24:src/MemoryAllocator.cpp ****         BlockDescriptor* nelem=(BlockDescriptor*)((uint64)elem+elem->blocksTaken*MEM_BLOCK_SIZE);
+ 174              		.loc 1 24 5 is_stmt 1
+GAS LISTING /tmp/ccULmWmu.s 			page 5
+
+
+ 175              	.LBB8:
+  24:src/MemoryAllocator.cpp ****         BlockDescriptor* nelem=(BlockDescriptor*)((uint64)elem+elem->blocksTaken*MEM_BLOCK_SIZE);
+ 176              		.loc 1 24 51 is_stmt 0
+ 177 00ec 03350700 		ld	a0,0(a4)
+  24:src/MemoryAllocator.cpp ****         BlockDescriptor* nelem=(BlockDescriptor*)((uint64)elem+elem->blocksTaken*MEM_BLOCK_SIZE);
+ 178              		.loc 1 24 62
+ 179 00f0 13156500 		slli	a0,a0,6
+  24:src/MemoryAllocator.cpp ****         BlockDescriptor* nelem=(BlockDescriptor*)((uint64)elem+elem->blocksTaken*MEM_BLOCK_SIZE);
+ 180              		.loc 1 24 44
+ 181 00f4 3305A700 		add	a0,a4,a0
+  24:src/MemoryAllocator.cpp ****         BlockDescriptor* nelem=(BlockDescriptor*)((uint64)elem+elem->blocksTaken*MEM_BLOCK_SIZE);
+ 182              		.loc 1 24 30
+ 183 00f8 97070000 		la	a5,HEAP_END_ADDR
+ 183      83B70700 
+ 184 0100 83B70700 		ld	a5,0(a5)
+ 185 0104 B387A740 		sub	a5,a5,a0
+  24:src/MemoryAllocator.cpp ****         BlockDescriptor* nelem=(BlockDescriptor*)((uint64)elem+elem->blocksTaken*MEM_BLOCK_SIZE);
+ 186              		.loc 1 24 79
+ 187 0108 93D76700 		srli	a5,a5,6
+  24:src/MemoryAllocator.cpp ****         BlockDescriptor* nelem=(BlockDescriptor*)((uint64)elem+elem->blocksTaken*MEM_BLOCK_SIZE);
+ 188              		.loc 1 24 5
+ 189 010c 63ECB700 		bltu	a5,a1,.L15
+ 190              	.LBB9:
+  25:src/MemoryAllocator.cpp ****         nelem->nextBlock=0;
+ 191              		.loc 1 25 9 is_stmt 1
+ 192              	.LVL8:
+  26:src/MemoryAllocator.cpp ****         nelem->blocksTaken=blocks;
+ 193              		.loc 1 26 9
+  26:src/MemoryAllocator.cpp ****         nelem->blocksTaken=blocks;
+ 194              		.loc 1 26 25 is_stmt 0
+ 195 0110 23340500 		sd	zero,8(a0)
+  27:src/MemoryAllocator.cpp ****         elem->nextBlock=(uint64)nelem;
+ 196              		.loc 1 27 9 is_stmt 1
+  27:src/MemoryAllocator.cpp ****         elem->nextBlock=(uint64)nelem;
+ 197              		.loc 1 27 27 is_stmt 0
+ 198 0114 2330B500 		sd	a1,0(a0)
+  28:src/MemoryAllocator.cpp ****         return nelem+1;
+ 199              		.loc 1 28 9 is_stmt 1
+  28:src/MemoryAllocator.cpp ****         return nelem+1;
+ 200              		.loc 1 28 24 is_stmt 0
+ 201 0118 2334A700 		sd	a0,8(a4)
+  29:src/MemoryAllocator.cpp ****     }
+ 202              		.loc 1 29 9 is_stmt 1
+  29:src/MemoryAllocator.cpp ****     }
+ 203              		.loc 1 29 22 is_stmt 0
+ 204 011c 13050501 		addi	a0,a0,16
+ 205              	.LVL9:
+ 206 0120 6FF01FFC 		j	.L10
+ 207              	.LVL10:
+ 208              	.L15:
+ 209              	.LBE9:
+ 210              	.LBE8:
+  31:src/MemoryAllocator.cpp **** }
+ 211              		.loc 1 31 12
+ 212 0124 13050000 		li	a0,0
+ 213 0128 6FF09FFB 		j	.L10
+ 214              		.cfi_endproc
+GAS LISTING /tmp/ccULmWmu.s 			page 6
+
+
+ 215              	.LFE4:
+ 217              		.align	2
+ 218              		.globl	_ZN15MemoryAllocator10deallocateEPv
+ 220              	_ZN15MemoryAllocator10deallocateEPv:
+ 221              	.LFB5:
+  33:src/MemoryAllocator.cpp **** 
+  34:src/MemoryAllocator.cpp **** int MemoryAllocator::deallocate(void *addr) {
+ 222              		.loc 1 34 45 is_stmt 1
+ 223              		.cfi_startproc
+ 224              	.LVL11:
+ 225 012c 130101FF 		addi	sp,sp,-16
+ 226              		.cfi_def_cfa_offset 16
+ 227 0130 23348100 		sd	s0,8(sp)
+ 228              		.cfi_offset 8, -8
+ 229 0134 13040101 		addi	s0,sp,16
+ 230              		.cfi_def_cfa 8, 0
+  35:src/MemoryAllocator.cpp ****     BlockDescriptor* prev=head;
+ 231              		.loc 1 35 5
+ 232              		.loc 1 35 22 is_stmt 0
+ 233 0138 83360500 		ld	a3,0(a0)
+ 234              	.LVL12:
+  36:src/MemoryAllocator.cpp ****     BlockDescriptor* curr=(BlockDescriptor*)head->nextBlock;
+ 235              		.loc 1 36 5 is_stmt 1
+ 236              		.loc 1 36 51 is_stmt 0
+ 237 013c 83B78600 		ld	a5,8(a3)
+ 238              	.LVL13:
+ 239              	.L21:
+  37:src/MemoryAllocator.cpp ****     while(curr){
+ 240              		.loc 1 37 5 is_stmt 1
+ 241              		.loc 1 37 11
+ 242 0140 63840702 		beqz	a5,.L22
+  38:src/MemoryAllocator.cpp ****         if(curr+1==addr){
+ 243              		.loc 1 38 9
+ 244              		.loc 1 38 16 is_stmt 0
+ 245 0144 13870701 		addi	a4,a5,16
+ 246              		.loc 1 38 9
+ 247 0148 6308B700 		beq	a4,a1,.L24
+  39:src/MemoryAllocator.cpp ****             prev->nextBlock=curr->nextBlock;
+  40:src/MemoryAllocator.cpp ****             return 0;
+  41:src/MemoryAllocator.cpp ****         }
+  42:src/MemoryAllocator.cpp ****         prev=curr;
+ 248              		.loc 1 42 9 is_stmt 1
+ 249              	.LVL14:
+  43:src/MemoryAllocator.cpp ****         curr=(BlockDescriptor*)curr->nextBlock;
+ 250              		.loc 1 43 9
+  42:src/MemoryAllocator.cpp ****         curr=(BlockDescriptor*)curr->nextBlock;
+ 251              		.loc 1 42 13 is_stmt 0
+ 252 014c 93860700 		mv	a3,a5
+ 253              		.loc 1 43 13
+ 254 0150 83B78700 		ld	a5,8(a5)
+ 255              	.LVL15:
+  37:src/MemoryAllocator.cpp ****         if(curr+1==addr){
+ 256              		.loc 1 37 5
+ 257 0154 6FF0DFFE 		j	.L21
+ 258              	.L24:
+  39:src/MemoryAllocator.cpp ****             return 0;
+ 259              		.loc 1 39 13 is_stmt 1
+GAS LISTING /tmp/ccULmWmu.s 			page 7
+
+
+  39:src/MemoryAllocator.cpp ****             return 0;
+ 260              		.loc 1 39 35 is_stmt 0
+ 261 0158 83B78700 		ld	a5,8(a5)
+ 262              	.LVL16:
+  39:src/MemoryAllocator.cpp ****             return 0;
+ 263              		.loc 1 39 28
+ 264 015c 23B4F600 		sd	a5,8(a3)
+  40:src/MemoryAllocator.cpp ****         }
+ 265              		.loc 1 40 13 is_stmt 1
+  40:src/MemoryAllocator.cpp ****         }
+ 266              		.loc 1 40 20 is_stmt 0
+ 267 0160 13050000 		li	a0,0
+ 268              	.LVL17:
+ 269 0164 6F008000 		j	.L19
+ 270              	.LVL18:
+ 271              	.L22:
+  44:src/MemoryAllocator.cpp ****     }
+  45:src/MemoryAllocator.cpp ****     return -1;
+ 272              		.loc 1 45 13
+ 273 0168 1305F0FF 		li	a0,-1
+ 274              	.LVL19:
+ 275              	.L19:
+  46:src/MemoryAllocator.cpp **** }
+ 276              		.loc 1 46 1
+ 277 016c 03348100 		ld	s0,8(sp)
+ 278              		.cfi_restore 8
+ 279              		.cfi_def_cfa 2, 16
+ 280 0170 13010101 		addi	sp,sp,16
+ 281              		.cfi_def_cfa_offset 0
+ 282 0174 67800000 		jr	ra
+ 283              		.cfi_endproc
+ 284              	.LFE5:
+ 286              		.align	2
+ 287              		.globl	_ZN15MemoryAllocator4copyEPvS0_m
+ 289              	_ZN15MemoryAllocator4copyEPvS0_m:
+ 290              	.LFB7:
+  47:src/MemoryAllocator.cpp **** 
+  48:src/MemoryAllocator.cpp **** void *MemoryAllocator::reallocate(int blocks, void* addr) {
+  49:src/MemoryAllocator.cpp ****     BlockDescriptor* curr=((BlockDescriptor*)addr)-1;
+  50:src/MemoryAllocator.cpp ****     int freeblocks;
+  51:src/MemoryAllocator.cpp ****     if(curr->nextBlock){
+  52:src/MemoryAllocator.cpp ****         freeblocks=(curr->nextBlock-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BLOCK_SIZE
+  53:src/MemoryAllocator.cpp ****     }
+  54:src/MemoryAllocator.cpp ****     else{
+  55:src/MemoryAllocator.cpp ****         freeblocks=((uint64)(HEAP_END_ADDR)-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BL
+  56:src/MemoryAllocator.cpp ****     }
+  57:src/MemoryAllocator.cpp ****     if(freeblocks>=blocks){
+  58:src/MemoryAllocator.cpp ****         curr->blocksTaken+=blocks;
+  59:src/MemoryAllocator.cpp ****         return curr+1;
+  60:src/MemoryAllocator.cpp ****     }
+  61:src/MemoryAllocator.cpp ****     else{
+  62:src/MemoryAllocator.cpp ****         void* newAddr=allocate(curr->blocksTaken+blocks);
+  63:src/MemoryAllocator.cpp ****         if(!newAddr){
+  64:src/MemoryAllocator.cpp ****             return nullptr;
+  65:src/MemoryAllocator.cpp ****         }
+  66:src/MemoryAllocator.cpp ****         copy(newAddr,addr,curr->blocksTaken);
+  67:src/MemoryAllocator.cpp ****         deallocate(addr);
+GAS LISTING /tmp/ccULmWmu.s 			page 8
+
+
+  68:src/MemoryAllocator.cpp ****         return newAddr;
+  69:src/MemoryAllocator.cpp ****     }
+  70:src/MemoryAllocator.cpp **** }
+  71:src/MemoryAllocator.cpp **** 
+  72:src/MemoryAllocator.cpp **** void MemoryAllocator::copy(void *d, void *s, uint64 cnt) {
+ 291              		.loc 1 72 58 is_stmt 1
+ 292              		.cfi_startproc
+ 293              	.LVL20:
+ 294 0178 130101FF 		addi	sp,sp,-16
+ 295              		.cfi_def_cfa_offset 16
+ 296 017c 23348100 		sd	s0,8(sp)
+ 297              		.cfi_offset 8, -8
+ 298 0180 13040101 		addi	s0,sp,16
+ 299              		.cfi_def_cfa 8, 0
+  73:src/MemoryAllocator.cpp ****     uint64* dst=(uint64*)d;
+ 300              		.loc 1 73 5
+ 301              	.LVL21:
+  74:src/MemoryAllocator.cpp ****     uint64* src=(uint64*)s;
+ 302              		.loc 1 74 5
+  75:src/MemoryAllocator.cpp ****     for(uint64 i=0;i<cnt*MEM_BLOCK_SIZE;i++){
+ 303              		.loc 1 75 5
+ 304              	.LBB10:
+ 305              		.loc 1 75 16 is_stmt 0
+ 306 0184 93070000 		li	a5,0
+ 307              	.LVL22:
+ 308              	.L27:
+ 309              		.loc 1 75 21 is_stmt 1 discriminator 3
+ 310              		.loc 1 75 25 is_stmt 0 discriminator 3
+ 311 0188 13976600 		slli	a4,a3,6
+ 312              		.loc 1 75 21 discriminator 3
+ 313 018c 63FEE700 		bleu	a4,a5,.L25
+  76:src/MemoryAllocator.cpp ****         *dst=*src;
+ 314              		.loc 1 76 9 is_stmt 1 discriminator 2
+ 315              		.loc 1 76 14 is_stmt 0 discriminator 2
+ 316 0190 03370600 		ld	a4,0(a2)
+ 317              		.loc 1 76 13 discriminator 2
+ 318 0194 23B0E500 		sd	a4,0(a1)
+  77:src/MemoryAllocator.cpp ****         dst++;
+ 319              		.loc 1 77 9 is_stmt 1 discriminator 2
+ 320              		.loc 1 77 12 is_stmt 0 discriminator 2
+ 321 0198 93858500 		addi	a1,a1,8
+ 322              	.LVL23:
+  78:src/MemoryAllocator.cpp ****         src++;
+ 323              		.loc 1 78 9 is_stmt 1 discriminator 2
+ 324              		.loc 1 78 12 is_stmt 0 discriminator 2
+ 325 019c 13068600 		addi	a2,a2,8
+ 326              	.LVL24:
+  75:src/MemoryAllocator.cpp ****         *dst=*src;
+ 327              		.loc 1 75 5 is_stmt 1 discriminator 2
+ 328 01a0 93871700 		addi	a5,a5,1
+ 329              	.LVL25:
+ 330 01a4 6FF05FFE 		j	.L27
+ 331              	.L25:
+ 332              	.LBE10:
+  79:src/MemoryAllocator.cpp ****     }
+  80:src/MemoryAllocator.cpp **** }...
+ 333              		.loc 1 80 1 is_stmt 0
+GAS LISTING /tmp/ccULmWmu.s 			page 9
+
+
+ 334 01a8 03348100 		ld	s0,8(sp)
+ 335              		.cfi_restore 8
+ 336              		.cfi_def_cfa 2, 16
+ 337 01ac 13010101 		addi	sp,sp,16
+ 338              		.cfi_def_cfa_offset 0
+ 339 01b0 67800000 		jr	ra
+ 340              		.cfi_endproc
+ 341              	.LFE7:
+ 343              		.align	2
+ 344              		.globl	_ZN15MemoryAllocator10reallocateEiPv
+ 346              	_ZN15MemoryAllocator10reallocateEiPv:
+ 347              	.LFB6:
+  48:src/MemoryAllocator.cpp **** void *MemoryAllocator::reallocate(int blocks, void* addr) {
+ 348              		.loc 1 48 59 is_stmt 1
+ 349              		.cfi_startproc
+ 350              	.LVL26:
+ 351 01b4 130101FD 		addi	sp,sp,-48
+ 352              		.cfi_def_cfa_offset 48
+ 353 01b8 23341102 		sd	ra,40(sp)
+ 354 01bc 23308102 		sd	s0,32(sp)
+ 355 01c0 233C9100 		sd	s1,24(sp)
+ 356 01c4 23382101 		sd	s2,16(sp)
+ 357 01c8 23343101 		sd	s3,8(sp)
+ 358              		.cfi_offset 1, -8
+ 359              		.cfi_offset 8, -16
+ 360              		.cfi_offset 9, -24
+ 361              		.cfi_offset 18, -32
+ 362              		.cfi_offset 19, -40
+ 363 01cc 13040103 		addi	s0,sp,48
+ 364              		.cfi_def_cfa 8, 0
+ 365 01d0 13090500 		mv	s2,a0
+ 366 01d4 93040600 		mv	s1,a2
+  49:src/MemoryAllocator.cpp ****     BlockDescriptor* curr=((BlockDescriptor*)addr)-1;
+ 367              		.loc 1 49 5
+  49:src/MemoryAllocator.cpp ****     BlockDescriptor* curr=((BlockDescriptor*)addr)-1;
+ 368              		.loc 1 49 22 is_stmt 0
+ 369 01d8 130706FF 		addi	a4,a2,-16
+ 370              	.LVL27:
+  50:src/MemoryAllocator.cpp ****     int freeblocks;
+ 371              		.loc 1 50 5 is_stmt 1
+  51:src/MemoryAllocator.cpp ****     if(curr->nextBlock){
+ 372              		.loc 1 51 5
+  51:src/MemoryAllocator.cpp ****     if(curr->nextBlock){
+ 373              		.loc 1 51 14 is_stmt 0
+ 374 01dc 833786FF 		ld	a5,-8(a2)
+  51:src/MemoryAllocator.cpp ****     if(curr->nextBlock){
+ 375              		.loc 1 51 5
+ 376 01e0 63880704 		beqz	a5,.L30
+  52:src/MemoryAllocator.cpp ****         freeblocks=(curr->nextBlock-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BLOCK_SIZE
+ 377              		.loc 1 52 9 is_stmt 1
+  52:src/MemoryAllocator.cpp ****         freeblocks=(curr->nextBlock-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BLOCK_SIZE
+ 378              		.loc 1 52 57 is_stmt 0
+ 379 01e4 833606FF 		ld	a3,-16(a2)
+  52:src/MemoryAllocator.cpp ****         freeblocks=(curr->nextBlock-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BLOCK_SIZE
+ 380              		.loc 1 52 68
+ 381 01e8 93966600 		slli	a3,a3,6
+  52:src/MemoryAllocator.cpp ****         freeblocks=(curr->nextBlock-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BLOCK_SIZE
+GAS LISTING /tmp/ccULmWmu.s 			page 10
+
+
+ 382              		.loc 1 52 50
+ 383 01ec 3307D700 		add	a4,a4,a3
+ 384              	.LVL28:
+  52:src/MemoryAllocator.cpp ****         freeblocks=(curr->nextBlock-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BLOCK_SIZE
+ 385              		.loc 1 52 36
+ 386 01f0 B387E740 		sub	a5,a5,a4
+  52:src/MemoryAllocator.cpp ****         freeblocks=(curr->nextBlock-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BLOCK_SIZE
+ 387              		.loc 1 52 85
+ 388 01f4 93D76700 		srli	a5,a5,6
+  52:src/MemoryAllocator.cpp ****         freeblocks=(curr->nextBlock-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BLOCK_SIZE
+ 389              		.loc 1 52 19
+ 390 01f8 9B870700 		sext.w	a5,a5
+ 391              	.LVL29:
+ 392              	.L31:
+  57:src/MemoryAllocator.cpp ****     if(freeblocks>=blocks){
+ 393              		.loc 1 57 5 is_stmt 1
+ 394              	.LBB11:
+ 395 01fc 63CEB704 		blt	a5,a1,.L32
+  58:src/MemoryAllocator.cpp ****         curr->blocksTaken+=blocks;
+ 396              		.loc 1 58 9
+  58:src/MemoryAllocator.cpp ****         curr->blocksTaken+=blocks;
+ 397              		.loc 1 58 26 is_stmt 0
+ 398 0200 83B704FF 		ld	a5,-16(s1)
+ 399              	.LVL30:
+ 400 0204 B385B700 		add	a1,a5,a1
+ 401              	.LVL31:
+ 402 0208 23B8B4FE 		sd	a1,-16(s1)
+  59:src/MemoryAllocator.cpp ****         return curr+1;
+ 403              		.loc 1 59 9 is_stmt 1
+  59:src/MemoryAllocator.cpp ****         return curr+1;
+ 404              		.loc 1 59 21 is_stmt 0
+ 405 020c 93890400 		mv	s3,s1
+ 406              	.LVL32:
+ 407              	.L29:
+ 408              	.LBE11:
+  70:src/MemoryAllocator.cpp **** }
+ 409              		.loc 1 70 1
+ 410 0210 13850900 		mv	a0,s3
+ 411 0214 83308102 		ld	ra,40(sp)
+ 412              		.cfi_remember_state
+ 413              		.cfi_restore 1
+ 414 0218 03340102 		ld	s0,32(sp)
+ 415              		.cfi_restore 8
+ 416              		.cfi_def_cfa 2, 48
+ 417 021c 83348101 		ld	s1,24(sp)
+ 418              		.cfi_restore 9
+ 419              	.LVL33:
+ 420 0220 03390101 		ld	s2,16(sp)
+ 421              		.cfi_restore 18
+ 422              	.LVL34:
+ 423 0224 83398100 		ld	s3,8(sp)
+ 424              		.cfi_restore 19
+ 425 0228 13010103 		addi	sp,sp,48
+ 426              		.cfi_def_cfa_offset 0
+ 427 022c 67800000 		jr	ra
+ 428              	.LVL35:
+ 429              	.L30:
+GAS LISTING /tmp/ccULmWmu.s 			page 11
+
+
+ 430              		.cfi_restore_state
+  55:src/MemoryAllocator.cpp ****         freeblocks=((uint64)(HEAP_END_ADDR)-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BL
+ 431              		.loc 1 55 9 is_stmt 1
+  55:src/MemoryAllocator.cpp ****         freeblocks=((uint64)(HEAP_END_ADDR)-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BL
+ 432              		.loc 1 55 65 is_stmt 0
+ 433 0230 833706FF 		ld	a5,-16(a2)
+  55:src/MemoryAllocator.cpp ****         freeblocks=((uint64)(HEAP_END_ADDR)-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BL
+ 434              		.loc 1 55 76
+ 435 0234 93976700 		slli	a5,a5,6
+  55:src/MemoryAllocator.cpp ****         freeblocks=((uint64)(HEAP_END_ADDR)-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BL
+ 436              		.loc 1 55 58
+ 437 0238 3307F700 		add	a4,a4,a5
+ 438              	.LVL36:
+  55:src/MemoryAllocator.cpp ****         freeblocks=((uint64)(HEAP_END_ADDR)-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BL
+ 439              		.loc 1 55 44
+ 440 023c 97070000 		la	a5,HEAP_END_ADDR
+ 440      83B70700 
+ 441 0244 83B70700 		ld	a5,0(a5)
+ 442 0248 B387E740 		sub	a5,a5,a4
+  55:src/MemoryAllocator.cpp ****         freeblocks=((uint64)(HEAP_END_ADDR)-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BL
+ 443              		.loc 1 55 93
+ 444 024c 93D76700 		srli	a5,a5,6
+  55:src/MemoryAllocator.cpp ****         freeblocks=((uint64)(HEAP_END_ADDR)-((uint64)curr+curr->blocksTaken*MEM_BLOCK_SIZE))/MEM_BL
+ 445              		.loc 1 55 19
+ 446 0250 9B870700 		sext.w	a5,a5
+ 447              	.LVL37:
+ 448 0254 6FF09FFA 		j	.L31
+ 449              	.L32:
+ 450              	.LBB13:
+ 451              	.LBB12:
+  62:src/MemoryAllocator.cpp ****         void* newAddr=allocate(curr->blocksTaken+blocks);
+ 452              		.loc 1 62 9 is_stmt 1
+  62:src/MemoryAllocator.cpp ****         void* newAddr=allocate(curr->blocksTaken+blocks);
+ 453              		.loc 1 62 38 is_stmt 0
+ 454 0258 83B704FF 		ld	a5,-16(s1)
+ 455              	.LVL38:
+  62:src/MemoryAllocator.cpp ****         void* newAddr=allocate(curr->blocksTaken+blocks);
+ 456              		.loc 1 62 31
+ 457 025c BB85B700 		addw	a1,a5,a1
+ 458              	.LVL39:
+ 459 0260 13050900 		mv	a0,s2
+ 460              	.LVL40:
+ 461 0264 97000000 		call	_ZN15MemoryAllocator8allocateEi
+ 461      E7800000 
+ 462              	.LVL41:
+ 463 026c 93090500 		mv	s3,a0
+ 464              	.LVL42:
+  63:src/MemoryAllocator.cpp ****         if(!newAddr){
+ 465              		.loc 1 63 9 is_stmt 1
+ 466 0270 E30005FA 		beqz	a0,.L29
+  66:src/MemoryAllocator.cpp ****         copy(newAddr,addr,curr->blocksTaken);
+ 467              		.loc 1 66 9
+  66:src/MemoryAllocator.cpp ****         copy(newAddr,addr,curr->blocksTaken);
+ 468              		.loc 1 66 13 is_stmt 0
+ 469 0274 83B604FF 		ld	a3,-16(s1)
+ 470 0278 13860400 		mv	a2,s1
+ 471 027c 93050500 		mv	a1,a0
+GAS LISTING /tmp/ccULmWmu.s 			page 12
+
+
+ 472 0280 13050900 		mv	a0,s2
+ 473              	.LVL43:
+ 474 0284 97000000 		call	_ZN15MemoryAllocator4copyEPvS0_m
+ 474      E7800000 
+ 475              	.LVL44:
+  67:src/MemoryAllocator.cpp ****         deallocate(addr);
+ 476              		.loc 1 67 9 is_stmt 1
+  67:src/MemoryAllocator.cpp ****         deallocate(addr);
+ 477              		.loc 1 67 19 is_stmt 0
+ 478 028c 93850400 		mv	a1,s1
+ 479 0290 13050900 		mv	a0,s2
+ 480 0294 97000000 		call	_ZN15MemoryAllocator10deallocateEPv
+ 480      E7800000 
+ 481              	.LVL45:
+  68:src/MemoryAllocator.cpp ****         return newAddr;
+ 482              		.loc 1 68 9 is_stmt 1
+  68:src/MemoryAllocator.cpp ****         return newAddr;
+ 483              		.loc 1 68 16 is_stmt 0
+ 484 029c 6FF05FF7 		j	.L29
+ 485              	.LBE12:
+ 486              	.LBE13:
+ 487              		.cfi_endproc
+ 488              	.LFE6:
+ 490              		.bss
+ 491              		.align	3
+ 492              		.set	.LANCHOR0,. + 0
+ 495              	_ZGVZN15MemoryAllocator20getAllocatorInstanceEvE8instance:
+ 496 0000 00000000 		.zero	8
+ 496      00000000 
+ 499              	_ZZN15MemoryAllocator20getAllocatorInstanceEvE8instance:
+ 500 0008 00000000 		.zero	8
+ 500      00000000 
+ 501              		.text
+ 502              	.Letext0:
+ 503              		.file 2 "src/../h/../lib/hw.h"
+ 504              		.file 3 "src/../h/MemoryAllocator.hpp"
+GAS LISTING /tmp/ccULmWmu.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 MemoryAllocator.cpp
+     /tmp/ccULmWmu.s:9      .text:0000000000000000 _ZN15MemoryAllocatorC2Ev
+     /tmp/ccULmWmu.s:13     .text:0000000000000000 .L0 
+     /tmp/ccULmWmu.s:15     .text:0000000000000000 .L0 
+     /tmp/ccULmWmu.s:16     .text:0000000000000004 .L0 
+     /tmp/ccULmWmu.s:18     .text:0000000000000008 .L0 
+     /tmp/ccULmWmu.s:20     .text:000000000000000c .L0 
+     /tmp/ccULmWmu.s:23     .text:000000000000000c .L0 
+     /tmp/ccULmWmu.s:27     .text:000000000000001c .L0 
+     /tmp/ccULmWmu.s:28     .text:000000000000001c .L0 
+     /tmp/ccULmWmu.s:31     .text:0000000000000024 .L0 
+     /tmp/ccULmWmu.s:33     .text:0000000000000028 .L0 
+     /tmp/ccULmWmu.s:36     .text:000000000000002c .L0 
+     /tmp/ccULmWmu.s:37     .text:0000000000000030 .L0 
+     /tmp/ccULmWmu.s:38     .text:0000000000000030 .L0 
+     /tmp/ccULmWmu.s:40     .text:0000000000000034 .L0 
+     /tmp/ccULmWmu.s:42     .text:0000000000000038 .L0 
+     /tmp/ccULmWmu.s:9      .text:0000000000000000 _ZN15MemoryAllocatorC1Ev
+     /tmp/ccULmWmu.s:50     .text:0000000000000038 _ZN15MemoryAllocator20getAllocatorInstanceEv
+     /tmp/ccULmWmu.s:53     .text:0000000000000038 .L0 
+     /tmp/ccULmWmu.s:54     .text:0000000000000038 .L0 
+     /tmp/ccULmWmu.s:55     .text:0000000000000038 .L0 
+     /tmp/ccULmWmu.s:56     .text:0000000000000038 .L0 
+     /tmp/ccULmWmu.s:59     .text:0000000000000044 .L0 
+     /tmp/ccULmWmu.s:60     .text:0000000000000044 .L0 
+     /tmp/ccULmWmu.s:64     .text:0000000000000050 .L0 
+     /tmp/ccULmWmu.s:65     .text:0000000000000054 .L0 
+     /tmp/ccULmWmu.s:68     .text:000000000000005c .L0 
+     /tmp/ccULmWmu.s:69     .text:000000000000005c .L0 
+     /tmp/ccULmWmu.s:71     .text:0000000000000060 .L0 
+     /tmp/ccULmWmu.s:73     .text:0000000000000060 .L0 
+     /tmp/ccULmWmu.s:79     .text:000000000000007c .L0 
+     /tmp/ccULmWmu.s:80     .text:000000000000007c .L0 
+     /tmp/ccULmWmu.s:82     .text:0000000000000088 .L0 
+     /tmp/ccULmWmu.s:84     .text:000000000000008c .L0 
+     /tmp/ccULmWmu.s:85     .text:000000000000008c .L0 
+     /tmp/ccULmWmu.s:87     .text:0000000000000090 .L0 
+     /tmp/ccULmWmu.s:89     .text:0000000000000094 .L0 
+     /tmp/ccULmWmu.s:95     .text:0000000000000094 _ZN15MemoryAllocator8allocateEi
+     /tmp/ccULmWmu.s:98     .text:0000000000000094 .L0 
+     /tmp/ccULmWmu.s:100    .text:0000000000000094 .L0 
+     /tmp/ccULmWmu.s:101    .text:0000000000000098 .L0 
+     /tmp/ccULmWmu.s:103    .text:000000000000009c .L0 
+     /tmp/ccULmWmu.s:105    .text:00000000000000a0 .L0 
+     /tmp/ccULmWmu.s:107    .text:00000000000000a0 .L0 
+     /tmp/ccULmWmu.s:108    .text:00000000000000a0 .L0 
+     /tmp/ccULmWmu.s:112    .text:00000000000000a4 .L0 
+     /tmp/ccULmWmu.s:113    .text:00000000000000a4 .L0 
+     /tmp/ccULmWmu.s:117    .text:00000000000000ac .L0 
+     /tmp/ccULmWmu.s:118    .text:00000000000000ac .L0 
+     /tmp/ccULmWmu.s:120    .text:00000000000000b0 .L0 
+     /tmp/ccULmWmu.s:122    .text:00000000000000b4 .L0 
+     /tmp/ccULmWmu.s:124    .text:00000000000000b8 .L0 
+     /tmp/ccULmWmu.s:126    .text:00000000000000bc .L0 
+     /tmp/ccULmWmu.s:128    .text:00000000000000c0 .L0 
+     /tmp/ccULmWmu.s:132    .text:00000000000000c4 .L0 
+GAS LISTING /tmp/ccULmWmu.s 			page 14
+
+
+     /tmp/ccULmWmu.s:135    .text:00000000000000c8 .L0 
+     /tmp/ccULmWmu.s:136    .text:00000000000000c8 .L0 
+     /tmp/ccULmWmu.s:140    .text:00000000000000cc .L0 
+     /tmp/ccULmWmu.s:147    .text:00000000000000d0 .L0 
+     /tmp/ccULmWmu.s:148    .text:00000000000000d0 .L0 
+     /tmp/ccULmWmu.s:149    .text:00000000000000d0 .L0 
+     /tmp/ccULmWmu.s:151    .text:00000000000000d4 .L0 
+     /tmp/ccULmWmu.s:152    .text:00000000000000d4 .L0 
+     /tmp/ccULmWmu.s:154    .text:00000000000000d8 .L0 
+     /tmp/ccULmWmu.s:155    .text:00000000000000d8 .L0 
+     /tmp/ccULmWmu.s:157    .text:00000000000000dc .L0 
+     /tmp/ccULmWmu.s:158    .text:00000000000000dc .L0 
+     /tmp/ccULmWmu.s:165    .text:00000000000000e0 .L0 
+     /tmp/ccULmWmu.s:166    .text:00000000000000e4 .L0 
+     /tmp/ccULmWmu.s:167    .text:00000000000000e4 .L0 
+     /tmp/ccULmWmu.s:168    .text:00000000000000e4 .L0 
+     /tmp/ccULmWmu.s:170    .text:00000000000000e8 .L0 
+     /tmp/ccULmWmu.s:173    .text:00000000000000ec .L0 
+     /tmp/ccULmWmu.s:176    .text:00000000000000ec .L0 
+     /tmp/ccULmWmu.s:177    .text:00000000000000ec .L0 
+     /tmp/ccULmWmu.s:179    .text:00000000000000f0 .L0 
+     /tmp/ccULmWmu.s:181    .text:00000000000000f4 .L0 
+     /tmp/ccULmWmu.s:183    .text:00000000000000f8 .L0 
+     /tmp/ccULmWmu.s:187    .text:0000000000000108 .L0 
+     /tmp/ccULmWmu.s:189    .text:000000000000010c .L0 
+     /tmp/ccULmWmu.s:193    .text:0000000000000110 .L0 
+     /tmp/ccULmWmu.s:194    .text:0000000000000110 .L0 
+     /tmp/ccULmWmu.s:195    .text:0000000000000110 .L0 
+     /tmp/ccULmWmu.s:197    .text:0000000000000114 .L0 
+     /tmp/ccULmWmu.s:198    .text:0000000000000114 .L0 
+     /tmp/ccULmWmu.s:200    .text:0000000000000118 .L0 
+     /tmp/ccULmWmu.s:201    .text:0000000000000118 .L0 
+     /tmp/ccULmWmu.s:203    .text:000000000000011c .L0 
+     /tmp/ccULmWmu.s:204    .text:000000000000011c .L0 
+     /tmp/ccULmWmu.s:212    .text:0000000000000124 .L0 
+     /tmp/ccULmWmu.s:214    .text:000000000000012c .L0 
+     /tmp/ccULmWmu.s:220    .text:000000000000012c _ZN15MemoryAllocator10deallocateEPv
+     /tmp/ccULmWmu.s:223    .text:000000000000012c .L0 
+     /tmp/ccULmWmu.s:225    .text:000000000000012c .L0 
+     /tmp/ccULmWmu.s:226    .text:0000000000000130 .L0 
+     /tmp/ccULmWmu.s:228    .text:0000000000000134 .L0 
+     /tmp/ccULmWmu.s:230    .text:0000000000000138 .L0 
+     /tmp/ccULmWmu.s:232    .text:0000000000000138 .L0 
+     /tmp/ccULmWmu.s:233    .text:0000000000000138 .L0 
+     /tmp/ccULmWmu.s:236    .text:000000000000013c .L0 
+     /tmp/ccULmWmu.s:237    .text:000000000000013c .L0 
+     /tmp/ccULmWmu.s:241    .text:0000000000000140 .L0 
+     /tmp/ccULmWmu.s:242    .text:0000000000000140 .L0 
+     /tmp/ccULmWmu.s:244    .text:0000000000000144 .L0 
+     /tmp/ccULmWmu.s:245    .text:0000000000000144 .L0 
+     /tmp/ccULmWmu.s:247    .text:0000000000000148 .L0 
+     /tmp/ccULmWmu.s:250    .text:000000000000014c .L0 
+     /tmp/ccULmWmu.s:251    .text:000000000000014c .L0 
+     /tmp/ccULmWmu.s:252    .text:000000000000014c .L0 
+     /tmp/ccULmWmu.s:254    .text:0000000000000150 .L0 
+     /tmp/ccULmWmu.s:257    .text:0000000000000154 .L0 
+     /tmp/ccULmWmu.s:260    .text:0000000000000158 .L0 
+GAS LISTING /tmp/ccULmWmu.s 			page 15
+
+
+     /tmp/ccULmWmu.s:261    .text:0000000000000158 .L0 
+     /tmp/ccULmWmu.s:264    .text:000000000000015c .L0 
+     /tmp/ccULmWmu.s:266    .text:0000000000000160 .L0 
+     /tmp/ccULmWmu.s:267    .text:0000000000000160 .L0 
+     /tmp/ccULmWmu.s:273    .text:0000000000000168 .L0 
+     /tmp/ccULmWmu.s:277    .text:000000000000016c .L0 
+     /tmp/ccULmWmu.s:278    .text:0000000000000170 .L0 
+     /tmp/ccULmWmu.s:279    .text:0000000000000170 .L0 
+     /tmp/ccULmWmu.s:281    .text:0000000000000174 .L0 
+     /tmp/ccULmWmu.s:283    .text:0000000000000178 .L0 
+     /tmp/ccULmWmu.s:289    .text:0000000000000178 _ZN15MemoryAllocator4copyEPvS0_m
+     /tmp/ccULmWmu.s:292    .text:0000000000000178 .L0 
+     /tmp/ccULmWmu.s:294    .text:0000000000000178 .L0 
+     /tmp/ccULmWmu.s:295    .text:000000000000017c .L0 
+     /tmp/ccULmWmu.s:297    .text:0000000000000180 .L0 
+     /tmp/ccULmWmu.s:299    .text:0000000000000184 .L0 
+     /tmp/ccULmWmu.s:302    .text:0000000000000184 .L0 
+     /tmp/ccULmWmu.s:303    .text:0000000000000184 .L0 
+     /tmp/ccULmWmu.s:305    .text:0000000000000184 .L0 
+     /tmp/ccULmWmu.s:306    .text:0000000000000184 .L0 
+     /tmp/ccULmWmu.s:310    .text:0000000000000188 .L0 
+     /tmp/ccULmWmu.s:311    .text:0000000000000188 .L0 
+     /tmp/ccULmWmu.s:313    .text:000000000000018c .L0 
+     /tmp/ccULmWmu.s:315    .text:0000000000000190 .L0 
+     /tmp/ccULmWmu.s:316    .text:0000000000000190 .L0 
+     /tmp/ccULmWmu.s:318    .text:0000000000000194 .L0 
+     /tmp/ccULmWmu.s:320    .text:0000000000000198 .L0 
+     /tmp/ccULmWmu.s:321    .text:0000000000000198 .L0 
+     /tmp/ccULmWmu.s:324    .text:000000000000019c .L0 
+     /tmp/ccULmWmu.s:325    .text:000000000000019c .L0 
+     /tmp/ccULmWmu.s:328    .text:00000000000001a0 .L0 
+     /tmp/ccULmWmu.s:334    .text:00000000000001a8 .L0 
+     /tmp/ccULmWmu.s:335    .text:00000000000001ac .L0 
+     /tmp/ccULmWmu.s:336    .text:00000000000001ac .L0 
+     /tmp/ccULmWmu.s:338    .text:00000000000001b0 .L0 
+     /tmp/ccULmWmu.s:340    .text:00000000000001b4 .L0 
+     /tmp/ccULmWmu.s:346    .text:00000000000001b4 _ZN15MemoryAllocator10reallocateEiPv
+     /tmp/ccULmWmu.s:349    .text:00000000000001b4 .L0 
+     /tmp/ccULmWmu.s:351    .text:00000000000001b4 .L0 
+     /tmp/ccULmWmu.s:352    .text:00000000000001b8 .L0 
+     /tmp/ccULmWmu.s:358    .text:00000000000001cc .L0 
+     /tmp/ccULmWmu.s:359    .text:00000000000001cc .L0 
+     /tmp/ccULmWmu.s:360    .text:00000000000001cc .L0 
+     /tmp/ccULmWmu.s:361    .text:00000000000001cc .L0 
+     /tmp/ccULmWmu.s:362    .text:00000000000001cc .L0 
+     /tmp/ccULmWmu.s:364    .text:00000000000001d0 .L0 
+     /tmp/ccULmWmu.s:368    .text:00000000000001d8 .L0 
+     /tmp/ccULmWmu.s:369    .text:00000000000001d8 .L0 
+     /tmp/ccULmWmu.s:372    .text:00000000000001dc .L0 
+     /tmp/ccULmWmu.s:373    .text:00000000000001dc .L0 
+     /tmp/ccULmWmu.s:374    .text:00000000000001dc .L0 
+     /tmp/ccULmWmu.s:376    .text:00000000000001e0 .L0 
+     /tmp/ccULmWmu.s:378    .text:00000000000001e4 .L0 
+     /tmp/ccULmWmu.s:379    .text:00000000000001e4 .L0 
+     /tmp/ccULmWmu.s:381    .text:00000000000001e8 .L0 
+     /tmp/ccULmWmu.s:383    .text:00000000000001ec .L0 
+     /tmp/ccULmWmu.s:386    .text:00000000000001f0 .L0 
+GAS LISTING /tmp/ccULmWmu.s 			page 16
+
+
+     /tmp/ccULmWmu.s:388    .text:00000000000001f4 .L0 
+     /tmp/ccULmWmu.s:390    .text:00000000000001f8 .L0 
+     /tmp/ccULmWmu.s:395    .text:00000000000001fc .L0 
+     /tmp/ccULmWmu.s:397    .text:0000000000000200 .L0 
+     /tmp/ccULmWmu.s:398    .text:0000000000000200 .L0 
+     /tmp/ccULmWmu.s:404    .text:000000000000020c .L0 
+     /tmp/ccULmWmu.s:405    .text:000000000000020c .L0 
+     /tmp/ccULmWmu.s:410    .text:0000000000000210 .L0 
+     /tmp/ccULmWmu.s:412    .text:0000000000000218 .L0 
+     /tmp/ccULmWmu.s:413    .text:0000000000000218 .L0 
+     /tmp/ccULmWmu.s:415    .text:000000000000021c .L0 
+     /tmp/ccULmWmu.s:416    .text:000000000000021c .L0 
+     /tmp/ccULmWmu.s:418    .text:0000000000000220 .L0 
+     /tmp/ccULmWmu.s:421    .text:0000000000000224 .L0 
+     /tmp/ccULmWmu.s:424    .text:0000000000000228 .L0 
+     /tmp/ccULmWmu.s:426    .text:000000000000022c .L0 
+     /tmp/ccULmWmu.s:430    .text:0000000000000230 .L0 
+     /tmp/ccULmWmu.s:432    .text:0000000000000230 .L0 
+     /tmp/ccULmWmu.s:433    .text:0000000000000230 .L0 
+     /tmp/ccULmWmu.s:435    .text:0000000000000234 .L0 
+     /tmp/ccULmWmu.s:437    .text:0000000000000238 .L0 
+     /tmp/ccULmWmu.s:440    .text:000000000000023c .L0 
+     /tmp/ccULmWmu.s:444    .text:000000000000024c .L0 
+     /tmp/ccULmWmu.s:446    .text:0000000000000250 .L0 
+     /tmp/ccULmWmu.s:453    .text:0000000000000258 .L0 
+     /tmp/ccULmWmu.s:454    .text:0000000000000258 .L0 
+     /tmp/ccULmWmu.s:457    .text:000000000000025c .L0 
+     /tmp/ccULmWmu.s:466    .text:0000000000000270 .L0 
+     /tmp/ccULmWmu.s:468    .text:0000000000000274 .L0 
+     /tmp/ccULmWmu.s:469    .text:0000000000000274 .L0 
+     /tmp/ccULmWmu.s:477    .text:000000000000028c .L0 
+     /tmp/ccULmWmu.s:478    .text:000000000000028c .L0 
+     /tmp/ccULmWmu.s:483    .text:000000000000029c .L0 
+     /tmp/ccULmWmu.s:484    .text:000000000000029c .L0 
+     /tmp/ccULmWmu.s:487    .text:00000000000002a0 .L0 
+     /tmp/ccULmWmu.s:492    .bss:0000000000000000 .LANCHOR0
+     /tmp/ccULmWmu.s:495    .bss:0000000000000000 _ZGVZN15MemoryAllocator20getAllocatorInstanceEvE8instance
+     /tmp/ccULmWmu.s:499    .bss:0000000000000008 _ZZN15MemoryAllocator20getAllocatorInstanceEvE8instance
+     /tmp/ccULmWmu.s:505    .text:00000000000002a0 .L0 
+     /tmp/ccULmWmu.s:23     .text:000000000000000c .L0 
+     /tmp/ccULmWmu.s:56     .text:0000000000000038 .L0 
+     /tmp/ccULmWmu.s:60     .text:0000000000000044 .L0 
+     /tmp/ccULmWmu.s:73     .text:0000000000000060 .L0 
+     /tmp/ccULmWmu.s:77     .text:0000000000000074 .L0 
+     /tmp/ccULmWmu.s:80     .text:000000000000007c .L0 
+     /tmp/ccULmWmu.s:183    .text:00000000000000f8 .L0 
+     /tmp/ccULmWmu.s:440    .text:000000000000023c .L0 
+     /tmp/ccULmWmu.s:62     .text:0000000000000050 .L9
+     /tmp/ccULmWmu.s:172    .text:00000000000000ec .L11
+     /tmp/ccULmWmu.s:142    .text:00000000000000d0 .L17
+     /tmp/ccULmWmu.s:110    .text:00000000000000a4 .L14
+     /tmp/ccULmWmu.s:208    .text:0000000000000124 .L15
+     /tmp/ccULmWmu.s:160    .text:00000000000000e0 .L10
+     /tmp/ccULmWmu.s:271    .text:0000000000000168 .L22
+     /tmp/ccULmWmu.s:258    .text:0000000000000158 .L24
+     /tmp/ccULmWmu.s:239    .text:0000000000000140 .L21
+     /tmp/ccULmWmu.s:275    .text:000000000000016c .L19
+GAS LISTING /tmp/ccULmWmu.s 			page 17
+
+
+     /tmp/ccULmWmu.s:331    .text:00000000000001a8 .L25
+     /tmp/ccULmWmu.s:308    .text:0000000000000188 .L27
+     /tmp/ccULmWmu.s:429    .text:0000000000000230 .L30
+     /tmp/ccULmWmu.s:449    .text:0000000000000258 .L32
+     /tmp/ccULmWmu.s:392    .text:00000000000001fc .L31
+     /tmp/ccULmWmu.s:407    .text:0000000000000210 .L29
+     /tmp/ccULmWmu.s:1099   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+     /tmp/ccULmWmu.s:2128   .debug_str:0000000000000138 .LASF36
+     /tmp/ccULmWmu.s:2148   .debug_str:000000000000026d .LASF37
+     /tmp/ccULmWmu.s:2172   .debug_str:000000000000036f .LASF38
+     /tmp/ccULmWmu.s:5      .text:0000000000000000 .Ltext0
+     /tmp/ccULmWmu.s:502    .text:00000000000002a0 .Letext0
+     /tmp/ccULmWmu.s:2082   .debug_line:0000000000000000 .Ldebug_line0
+     /tmp/ccULmWmu.s:2136   .debug_str:0000000000000223 .LASF0
+     /tmp/ccULmWmu.s:2122   .debug_str:000000000000010d .LASF1
+     /tmp/ccULmWmu.s:2114   .debug_str:00000000000000dd .LASF2
+     /tmp/ccULmWmu.s:2098   .debug_str:0000000000000086 .LASF4
+     /tmp/ccULmWmu.s:2120   .debug_str:00000000000000fb .LASF3
+     /tmp/ccULmWmu.s:2088   .debug_str:0000000000000023 .LASF5
+     /tmp/ccULmWmu.s:2084   .debug_str:0000000000000000 .LASF6
+     /tmp/ccULmWmu.s:2110   .debug_str:00000000000000bb .LASF7
+     /tmp/ccULmWmu.s:2142   .debug_str:000000000000023c .LASF8
+     /tmp/ccULmWmu.s:2096   .debug_str:0000000000000078 .LASF9
+     /tmp/ccULmWmu.s:2176   .debug_str:00000000000003b2 .LASF10
+     /tmp/ccULmWmu.s:2112   .debug_str:00000000000000ce .LASF11
+     /tmp/ccULmWmu.s:2168   .debug_str:000000000000034f .LASF12
+     /tmp/ccULmWmu.s:2150   .debug_str:0000000000000285 .LASF13
+     /tmp/ccULmWmu.s:2124   .debug_str:0000000000000120 .LASF14
+     /tmp/ccULmWmu.s:2106   .debug_str:00000000000000a0 .LASF15
+     /tmp/ccULmWmu.s:2146   .debug_str:0000000000000257 .LASF16
+     /tmp/ccULmWmu.s:2086   .debug_str:0000000000000013 .LASF39
+     /tmp/ccULmWmu.s:2170   .debug_str:000000000000035f .LASF40
+     /tmp/ccULmWmu.s:2126   .debug_str:000000000000012c .LASF17
+     /tmp/ccULmWmu.s:2094   .debug_str:000000000000006e .LASF18
+     /tmp/ccULmWmu.s:2166   .debug_str:000000000000033a .LASF41
+     /tmp/ccULmWmu.s:2152   .debug_str:0000000000000295 .LASF42
+     /tmp/ccULmWmu.s:2134   .debug_str:000000000000021a .LASF19
+     /tmp/ccULmWmu.s:2090   .debug_str:000000000000002a .LASF21
+     /tmp/ccULmWmu.s:2118   .debug_str:00000000000000f0 .LASF20
+     /tmp/ccULmWmu.s:2092   .debug_str:000000000000004a .LASF22
+     /tmp/ccULmWmu.s:2144   .debug_str:000000000000024c .LASF23
+     /tmp/ccULmWmu.s:2156   .debug_str:00000000000002c8 .LASF24
+     /tmp/ccULmWmu.s:2138   .debug_str:0000000000000230 .LASF43
+     /tmp/ccULmWmu.s:2162   .debug_str:0000000000000311 .LASF44
+     /tmp/ccULmWmu.s:2132   .debug_str:0000000000000201 .LASF45
+     /tmp/ccULmWmu.s:2116   .debug_str:00000000000000eb .LASF25
+     /tmp/ccULmWmu.s:290    .text:0000000000000178 .LFB7
+     /tmp/ccULmWmu.s:341    .text:00000000000001b4 .LFE7
+     /tmp/ccULmWmu.s:2100   .debug_str:000000000000008d .LASF26
+     /tmp/ccULmWmu.s:1763   .debug_loc:0000000000000000 .LLST8
+     /tmp/ccULmWmu.s:1777   .debug_loc:0000000000000039 .LLST9
+     /tmp/ccULmWmu.s:304    .text:0000000000000184 .LBB10
+     /tmp/ccULmWmu.s:332    .text:00000000000001a8 .LBE10
+     /tmp/ccULmWmu.s:1791   .debug_loc:0000000000000072 .LLST10
+     /tmp/ccULmWmu.s:347    .text:00000000000001b4 .LFB6
+     /tmp/ccULmWmu.s:488    .text:00000000000002a0 .LFE6
+     /tmp/ccULmWmu.s:1803   .debug_loc:00000000000000a9 .LLST11
+GAS LISTING /tmp/ccULmWmu.s 			page 18
+
+
+     /tmp/ccULmWmu.s:2140   .debug_str:0000000000000235 .LASF27
+     /tmp/ccULmWmu.s:1829   .debug_loc:000000000000011b .LLST12
+     /tmp/ccULmWmu.s:2108   .debug_str:00000000000000b6 .LASF28
+     /tmp/ccULmWmu.s:1854   .debug_loc:000000000000017d .LLST13
+     /tmp/ccULmWmu.s:2104   .debug_str:000000000000009b .LASF29
+     /tmp/ccULmWmu.s:1876   .debug_loc:00000000000001dc .LLST14
+     /tmp/ccULmWmu.s:2158   .debug_str:00000000000002ed .LASF30
+     /tmp/ccULmWmu.s:1914   .debug_loc:0000000000000269 .LLST15
+     /tmp/ccULmWmu.s:451    .text:0000000000000258 .LBB12
+     /tmp/ccULmWmu.s:485    .text:00000000000002a0 .LBE12
+     /tmp/ccULmWmu.s:2164   .debug_str:0000000000000332 .LASF31
+     /tmp/ccULmWmu.s:1925   .debug_loc:000000000000029f .LLST16
+     /tmp/ccULmWmu.s:462    .text:000000000000026c .LVL41
+     /tmp/ccULmWmu.s:475    .text:000000000000028c .LVL44
+     /tmp/ccULmWmu.s:481    .text:000000000000029c .LVL45
+     /tmp/ccULmWmu.s:221    .text:000000000000012c .LFB5
+     /tmp/ccULmWmu.s:284    .text:0000000000000178 .LFE5
+     /tmp/ccULmWmu.s:1940   .debug_loc:00000000000002e8 .LLST5
+     /tmp/ccULmWmu.s:2174   .debug_str:00000000000003ad .LASF32
+     /tmp/ccULmWmu.s:1965   .debug_loc:000000000000034a .LLST6
+     /tmp/ccULmWmu.s:1980   .debug_loc:0000000000000393 .LLST7
+     /tmp/ccULmWmu.s:96     .text:0000000000000094 .LFB4
+     /tmp/ccULmWmu.s:215    .text:000000000000012c .LFE4
+     /tmp/ccULmWmu.s:2006   .debug_loc:0000000000000405 .LLST0
+     /tmp/ccULmWmu.s:2130   .debug_str:00000000000001fc .LASF33
+     /tmp/ccULmWmu.s:2020   .debug_loc:000000000000043e .LLST1
+     /tmp/ccULmWmu.s:2074   .debug_ranges:0000000000000000 .Ldebug_ranges0
+     /tmp/ccULmWmu.s:2035   .debug_loc:0000000000000487 .LLST2
+     /tmp/ccULmWmu.s:145    .text:00000000000000d0 .LBB5
+     /tmp/ccULmWmu.s:161    .text:00000000000000e0 .LBE5
+     /tmp/ccULmWmu.s:2154   .debug_str:00000000000002c2 .LASF34
+     /tmp/ccULmWmu.s:2042   .debug_loc:00000000000004aa .LLST3
+     /tmp/ccULmWmu.s:190    .text:0000000000000110 .LBB9
+     /tmp/ccULmWmu.s:209    .text:0000000000000124 .LBE9
+     /tmp/ccULmWmu.s:2049   .debug_loc:00000000000004cd .LLST4
+     /tmp/ccULmWmu.s:2160   .debug_str:00000000000002f8 .LASF46
+     /tmp/ccULmWmu.s:10     .text:0000000000000000 .LFB2
+     /tmp/ccULmWmu.s:43     .text:0000000000000038 .LFE2
+     /tmp/ccULmWmu.s:51     .text:0000000000000038 .LFB0
+     /tmp/ccULmWmu.s:90     .text:0000000000000094 .LFE0
+     /tmp/ccULmWmu.s:2102   .debug_str:0000000000000092 .LASF35
+     /tmp/ccULmWmu.s:75     .text:0000000000000070 .LVL1
+     /tmp/ccULmWmu.s:293    .text:0000000000000178 .LVL20
+     /tmp/ccULmWmu.s:307    .text:0000000000000188 .LVL22
+     /tmp/ccULmWmu.s:301    .text:0000000000000184 .LVL21
+     /tmp/ccULmWmu.s:350    .text:00000000000001b4 .LVL26
+     /tmp/ccULmWmu.s:406    .text:0000000000000210 .LVL32
+     /tmp/ccULmWmu.s:422    .text:0000000000000224 .LVL34
+     /tmp/ccULmWmu.s:428    .text:0000000000000230 .LVL35
+     /tmp/ccULmWmu.s:460    .text:0000000000000264 .LVL40
+     /tmp/ccULmWmu.s:401    .text:0000000000000208 .LVL31
+     /tmp/ccULmWmu.s:458    .text:0000000000000260 .LVL39
+     /tmp/ccULmWmu.s:419    .text:0000000000000220 .LVL33
+     /tmp/ccULmWmu.s:370    .text:00000000000001dc .LVL27
+     /tmp/ccULmWmu.s:384    .text:00000000000001f0 .LVL28
+     /tmp/ccULmWmu.s:438    .text:000000000000023c .LVL36
+     /tmp/ccULmWmu.s:391    .text:00000000000001fc .LVL29
+GAS LISTING /tmp/ccULmWmu.s 			page 19
+
+
+     /tmp/ccULmWmu.s:399    .text:0000000000000204 .LVL30
+     /tmp/ccULmWmu.s:447    .text:0000000000000254 .LVL37
+     /tmp/ccULmWmu.s:455    .text:000000000000025c .LVL38
+     /tmp/ccULmWmu.s:464    .text:0000000000000270 .LVL42
+     /tmp/ccULmWmu.s:473    .text:0000000000000284 .LVL43
+     /tmp/ccULmWmu.s:224    .text:000000000000012c .LVL11
+     /tmp/ccULmWmu.s:268    .text:0000000000000164 .LVL17
+     /tmp/ccULmWmu.s:270    .text:0000000000000168 .LVL18
+     /tmp/ccULmWmu.s:274    .text:000000000000016c .LVL19
+     /tmp/ccULmWmu.s:234    .text:000000000000013c .LVL12
+     /tmp/ccULmWmu.s:249    .text:000000000000014c .LVL14
+     /tmp/ccULmWmu.s:255    .text:0000000000000154 .LVL15
+     /tmp/ccULmWmu.s:238    .text:0000000000000140 .LVL13
+     /tmp/ccULmWmu.s:262    .text:000000000000015c .LVL16
+     /tmp/ccULmWmu.s:99     .text:0000000000000094 .LVL2
+     /tmp/ccULmWmu.s:109    .text:00000000000000a4 .LVL3
+     /tmp/ccULmWmu.s:137    .text:00000000000000cc .LVL5
+     /tmp/ccULmWmu.s:141    .text:00000000000000d0 .LVL6
+     /tmp/ccULmWmu.s:129    .text:00000000000000c4 .LVL4
+     /tmp/ccULmWmu.s:159    .text:00000000000000e0 .LVL7
+     /tmp/ccULmWmu.s:192    .text:0000000000000110 .LVL8
+     /tmp/ccULmWmu.s:205    .text:0000000000000120 .LVL9
+     /tmp/ccULmWmu.s:207    .text:0000000000000124 .LVL10
+     /tmp/ccULmWmu.s:506    .debug_info:0000000000000000 .Ldebug_info0
+     /tmp/ccULmWmu.s:115    .text:00000000000000ac .LBB3
+     /tmp/ccULmWmu.s:138    .text:00000000000000cc .LBE3
+     /tmp/ccULmWmu.s:143    .text:00000000000000d0 .LBB7
+     /tmp/ccULmWmu.s:163    .text:00000000000000e0 .LBE7
+
+UNDEFINED SYMBOLS
+HEAP_START_ADDR
+HEAP_END_ADDR
